@@ -9,7 +9,7 @@
     <style>
         :root {
             --bg-dark: #0f0f12;
-            --card-bg: #18181c;
+            --card-bg: rgba(24, 24, 28, 0.9);
             --card-border: #2a2a32;
             --accent-gold: #e2b857;
             --text-white: #ffffff;
@@ -42,18 +42,20 @@
             text-decoration: none;
         }
 
-        /* Hero Section */
+        /* Hero Section com Imagem de Fundo */
         header.hero {
-            padding: 100px 0 80px 0;
+            padding: 120px 0 100px 0;
             text-align: center;
-            background: radial-gradient(circle at top, rgba(226, 184, 87, 0.08) 0%, rgba(15, 15, 18, 0) 70%);
+            background: linear-gradient(rgba(15, 15, 18, 0.85), rgba(15, 15, 18, 0.95)), 
+                        url('https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat;
+            position: relative;
         }
 
         .badge {
             display: inline-block;
             padding: 6px 16px;
-            background: rgba(226, 184, 87, 0.1);
-            border: 1px solid rgba(226, 184, 87, 0.3);
+            background: rgba(226, 184, 87, 0.15);
+            border: 1px solid rgba(226, 184, 87, 0.4);
             border-radius: 30px;
             color: var(--accent-gold);
             font-size: 0.85rem;
@@ -61,10 +63,11 @@
             margin-bottom: 24px;
             text-transform: uppercase;
             letter-spacing: 1px;
+            backdrop-filter: blur(5px);
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.2rem;
             font-weight: 800;
             line-height: 1.2;
             margin-bottom: 20px;
@@ -94,17 +97,16 @@
             font-weight: 700;
             padding: 18px 40px;
             border-radius: 50px;
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.25);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
             transition: all 0.3s ease;
         }
 
         .btn-whatsapp:hover {
             background-color: var(--whatsapp-hover);
             transform: translateY(-2px);
-            box-shadow: 0 14px 30px rgba(37, 211, 102, 0.35);
+            box-shadow: 0 14px 30px rgba(37, 211, 102, 0.4);
         }
 
-        /* Ícone do WhatsApp em SVG embutido */
         .btn-whatsapp svg {
             width: 24px;
             height: 24px;
@@ -113,7 +115,9 @@
 
         /* Seção Categorias / Destaques */
         .categories-section {
-            padding: 60px 0;
+            padding: 80px 0;
+            background: linear-gradient(to bottom, rgba(15,15,18,0.9), rgba(15,15,18,1)),
+                        url('https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&q=80&w=1920') center/cover fixed;
         }
 
         .section-title {
@@ -134,6 +138,7 @@
             border: 1px solid var(--card-border);
             border-radius: 20px;
             padding: 36px 28px;
+            backdrop-filter: blur(10px);
             transition: transform 0.3s ease, border-color 0.3s ease;
         }
 
@@ -162,7 +167,7 @@
 
         /* Seção Vantagens */
         .advantages-section {
-            padding: 60px 0;
+            padding: 80px 0;
             background-color: #131317;
             border-top: 1px solid #1f1f26;
             border-bottom: 1px solid #1f1f26;
@@ -194,8 +199,10 @@
 
         /* Chamada Final */
         .cta-final {
-            padding: 90px 0;
+            padding: 100px 0;
             text-align: center;
+            background: linear-gradient(rgba(15, 15, 18, 0.85), rgba(15, 15, 18, 0.95)), 
+                        url('https://images.unsplash.com/photo-1594035910387-fea47734265f?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat;
         }
 
         .cta-final h2 {
@@ -230,12 +237,12 @@
 </head>
 <body>
 
-    <!-- Hero Section -->
+    <!-- Hero Section com Imagem de Fundo -->
     <header class="hero">
         <div class="container">
             <span class="badge">Comunidade de Ofertas & Dicas</span>
             <h1>Os Melhores Perfumes com <span>Descontos Exclusivos</span></h1>
-            <p>Seja notificado sobre cupons, alertas de estoque e as melhores opções de perfumes árabes, nacionais e importados no Mercado Livre.</p>
+            <p>Seja notificado sobre cupons, alertas de estoque e as melhores recomendações de perfumes árabes, nacionais e importados em lojas oficiais.</p>
             
             <!-- SUBSTITUA O LINK ABAIXO PELO SEU LINK DO WHATSAPP -->
             <a href="LINK_DO_WHATSAPP" class="btn-whatsapp">
@@ -246,23 +253,25 @@
     </header>
 
     <!-- O que você encontra -->
-    <section class="categories-section container">
-        <h2 class="section-title">Destaques da Perfumaria</h2>
-        <div class="grid-3">
-            <div class="card">
-                <span class="card-icon">✨</span>
-                <h3>Perfumes Árabes</h3>
-                <p>Opções com altíssima fixação e projeção marcante. Seleção das melhores fragrâncias orientais com excelente custo-benefício.</p>
-            </div>
-            <div class="card">
-                <span class="card-icon">🍃</span>
-                <h3>Nacionais Selecionados</h3>
-                <p>As melhores criações da perfumaria brasileira que entregam performance de nível internacional para o seu dia a dia.</p>
-            </div>
-            <div class="card">
-                <span class="card-icon">👑</span>
-                <h3>Importados Consagrados</h3>
-                <p>Os maiores clássicos mundiais das grandes grifes com cupons e preços diferenciados em lojas oficiais do Mercado Livre.</p>
+    <section class="categories-section">
+        <div class="container">
+            <h2 class="section-title">Destaques da Perfumaria</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <span class="card-icon">✨</span>
+                    <h3>Perfumes Árabes</h3>
+                    <p>Opções com altíssima fixação e projeção marcante. Seleção das melhores fragrâncias orientais com excelente custo-benefício.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">🍃</span>
+                    <h3>Nacionais Selecionados</h3>
+                    <p>As melhores criações da perfumaria brasileira que entregam performance de nível internacional para o seu dia a dia.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">👑</span>
+                    <h3>Importados Consagrados</h3>
+                    <p>Os maiores clássicos mundiais das grandes grifes com cupons e preços diferenciados em lojas verificadas.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -274,7 +283,7 @@
             <div class="advantages-list">
                 <div class="adv-item">
                     <span class="check">✓</span>
-                    <span>Alertas em tempo real de cupons ativos no Mercado Livre.</span>
+                    <span>Alertas em tempo real de cupons e promoções ativas.</span>
                 </div>
                 <div class="adv-item">
                     <span class="check">✓</span>
@@ -282,7 +291,7 @@
                 </div>
                 <div class="adv-item">
                     <span class="check">✓</span>
-                    <span>Indicação segura de lojas oficiais e vendedores verificados.</span>
+                    <span>Indicação segura de lojas oficiais e vendedores confiáveis.</span>
                 </div>
                 <div class="adv-item">
                     <span class="check">✓</span>
@@ -292,21 +301,23 @@
         </div>
     </section>
 
-    <!-- Chamada Final -->
-    <section class="cta-final container">
-        <h2>Garanta sua vaga no grupo gratuito</h2>
-        <p>Receba as melhores recomendações e ofertas direto no seu WhatsApp.</p>
-        <a href="LINK_DO_WHATSAPP" class="btn-whatsapp">
-            <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-            ENTRAR NO GRUPO VIP
-        </a>
+    <!-- Chamada Final com Imagem de Fundo -->
+    <section class="cta-final">
+        <div class="container">
+            <h2>Garanta sua vaga no grupo gratuito</h2>
+            <p>Receba as melhores recomendações e ofertas direto no seu WhatsApp.</p>
+            <a href="LINK_DO_WHATSAPP" class="btn-whatsapp">
+                <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                ENTRAR NO GRUPO VIP
+            </a>
+        </div>
     </section>
 
     <!-- Rodapé -->
     <footer>
         <div class="container">
             <p>&copy; 2026 Perfumes VIP. Todos os direitos reservados.</p>
-            <p style="margin-top: 8px; color: #555;">Divulgação independente de ofertas do Mercado Livre.</p>
+            <p style="margin-top: 8px; color: #555;">Divulgação independente de ofertas e recomendações de perfumaria.</p>
         </div>
     </footer>
 

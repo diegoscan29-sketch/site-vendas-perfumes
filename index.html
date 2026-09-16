@@ -8,13 +8,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-light: #f8f9fa;
-            --card-bg: #ffffff;
-            --card-border: #e9ecef;
-            --primary-dark: #111827;
-            --accent-gold: #c5a059;
-            --text-dark: #1f2937;
-            --text-muted: #4b5563;
+            --bg-dark: #121216;
+            --card-bg: rgba(26, 26, 32, 0.9);
+            --card-border: rgba(226, 184, 87, 0.4);
+            --accent-gold: #f0c45d;
+            --text-white: #ffffff;
+            --text-muted: #e0e0ec;
             --whatsapp-green: #25d366;
             --whatsapp-hover: #1eb956;
         }
@@ -27,8 +26,8 @@
         }
 
         body {
-            background-color: var(--bg-light);
-            color: var(--text-dark);
+            background-color: var(--bg-dark);
+            color: var(--text-white);
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
         }
@@ -43,35 +42,37 @@
             text-decoration: none;
         }
 
-        /* Header / Hero Section Limpa */
+        /* Hero Section Iluminada com Frascos de Perfume ao Fundo */
         header.hero {
-            padding: 80px 0 60px 0;
+            padding: 120px 0 100px 0;
             text-align: center;
-            background: #ffffff;
-            border-bottom: 1px solid var(--card-border);
+            background: linear-gradient(rgba(18, 18, 22, 0.45), rgba(18, 18, 22, 0.75)), 
+                        url('https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat;
+            position: relative;
         }
 
         .badge {
             display: inline-block;
             padding: 6px 18px;
-            background: #fdf8ef;
+            background: rgba(0, 0, 0, 0.65);
             border: 1px solid var(--accent-gold);
             border-radius: 30px;
-            color: #926c1f;
+            color: var(--accent-gold);
             font-size: 0.85rem;
             font-weight: 700;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
             text-transform: uppercase;
             letter-spacing: 1px;
+            backdrop-filter: blur(8px);
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.2rem;
             font-weight: 800;
             line-height: 1.2;
-            color: var(--primary-dark);
-            margin-bottom: 18px;
+            margin-bottom: 20px;
             letter-spacing: -0.5px;
+            text-shadow: 0 3px 12px rgba(0,0,0,0.9);
         }
 
         .hero h1 span {
@@ -80,10 +81,11 @@
 
         .hero p {
             font-size: 1.15rem;
-            color: var(--text-muted);
+            color: #ffffff;
             max-width: 680px;
-            margin: 0 auto 32px auto;
-            font-weight: 400;
+            margin: 0 auto 36px auto;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.95);
+            font-weight: 500;
         }
 
         /* Botão do WhatsApp */
@@ -98,14 +100,14 @@
             font-weight: 800;
             padding: 18px 40px;
             border-radius: 50px;
-            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
             transition: all 0.3s ease;
         }
 
         .btn-whatsapp:hover {
             background-color: var(--whatsapp-hover);
             transform: translateY(-2px);
-            box-shadow: 0 12px 25px rgba(37, 211, 102, 0.4);
+            box-shadow: 0 14px 30px rgba(37, 211, 102, 0.5);
         }
 
         .btn-whatsapp svg {
@@ -114,18 +116,18 @@
             fill: currentColor;
         }
 
-        /* Cards de Perfumes Iluminados com Fotos */
+        /* Seção Categorias com Cards de Imagem */
         .categories-section {
-            padding: 70px 0;
-            background-color: var(--bg-light);
+            padding: 80px 0;
+            background-color: #16161c;
         }
 
         .section-title {
             text-align: center;
             font-size: 2.2rem;
             font-weight: 800;
-            color: var(--primary-dark);
-            margin-bottom: 40px;
+            margin-bottom: 48px;
+            color: #ffffff;
         }
 
         .grid-3 {
@@ -137,46 +139,46 @@
         .card {
             background-color: var(--card-bg);
             border: 1px solid var(--card-border);
-            border-radius: 16px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, border-color 0.3s ease;
         }
 
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-color: var(--accent-gold);
         }
 
         .card-img {
             width: 100%;
-            height: 220px;
+            height: 200px;
             object-fit: cover;
         }
 
-        .card-content {
-            padding: 24px;
+        .card-body {
+            padding: 28px;
         }
 
         .card h3 {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             font-weight: 700;
-            margin-bottom: 10px;
-            color: var(--primary-dark);
+            margin-bottom: 12px;
+            color: var(--accent-gold);
         }
 
         .card p {
             color: var(--text-muted);
-            font-size: 0.95rem;
+            font-size: 0.98rem;
             line-height: 1.6;
         }
 
         /* Seção Vantagens */
         .advantages-section {
-            padding: 70px 0;
-            background-color: #ffffff;
-            border-top: 1px solid var(--card-border);
-            border-bottom: 1px solid var(--card-border);
+            padding: 80px 0;
+            background-color: #121216;
+            border-top: 1px solid #282832;
+            border-bottom: 1px solid #282832;
         }
 
         .advantages-list {
@@ -184,16 +186,16 @@
             margin: 0 auto;
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 20px;
         }
 
         .adv-item {
             display: flex;
             align-items: center;
             gap: 16px;
-            background-color: var(--bg-light);
-            padding: 18px 24px;
-            border-radius: 12px;
+            background-color: var(--card-bg);
+            padding: 20px 24px;
+            border-radius: 14px;
             border: 1px solid var(--card-border);
         }
 
@@ -203,45 +205,40 @@
             font-size: 1.3rem;
         }
 
-        .adv-item span {
-            color: var(--text-dark);
-            font-weight: 600;
-            font-size: 1rem;
-        }
-
         /* Chamada Final */
         .cta-final {
-            padding: 80px 0;
+            padding: 100px 0;
             text-align: center;
-            background-color: #ffffff;
+            background: linear-gradient(rgba(18, 18, 22, 0.6), rgba(18, 18, 22, 0.85)), 
+                        url('https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat;
         }
 
         .cta-final h2 {
-            font-size: 2.2rem;
+            font-size: 2.4rem;
             font-weight: 800;
-            color: var(--primary-dark);
-            margin-bottom: 14px;
+            margin-bottom: 16px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.8);
         }
 
         .cta-final p {
-            color: var(--text-muted);
-            margin-bottom: 32px;
-            font-size: 1.1rem;
+            color: #ffffff;
+            margin-bottom: 36px;
+            font-size: 1.15rem;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.9);
         }
 
         /* Rodapé */
         footer {
-            padding: 36px 0;
+            padding: 40px 0;
             text-align: center;
-            border-top: 1px solid var(--card-border);
-            background-color: var(--bg-light);
-            color: #6b7280;
+            border-top: 1px solid #22222a;
+            color: #999;
             font-size: 0.85rem;
         }
 
         /* Responsivo */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.1rem; }
+            .hero h1 { font-size: 2.2rem; }
             .hero p { font-size: 1rem; }
             .btn-whatsapp { width: 100%; padding: 16px; font-size: 1rem; }
             .section-title { font-size: 1.7rem; }
@@ -250,14 +247,14 @@
 </head>
 <body>
 
-    <!-- Hero Section Clean e Iluminada -->
+    <!-- Hero Section -->
     <header class="hero">
         <div class="container">
             <span class="badge">Comunidade de Ofertas & Dicas</span>
             <h1>Os Melhores Perfumes com <span>Descontos Exclusivos</span></h1>
             <p>Seja notificado sobre cupons, alertas de estoque e as melhores recomendações de perfumes árabes, nacionais e importados em lojas oficiais.</p>
             
-            <!-- SUBSTITUA LINK_DO_WHATSAPP PELO SEU LINK REAL DO WHATSAPP -->
+            <!-- SUBSTITUA LINK_DO_WHATSAPP PELO SEU LINK DO GRUPO -->
             <a href="LINK_DO_WHATSAPP" class="btn-whatsapp">
                 <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
                 ENTRAR NO GRUPO VIP
@@ -265,7 +262,7 @@
         </div>
     </header>
 
-    <!-- Destaques com Fotos Claras -->
+    <!-- Destaques com Imagens de Frascos Reais -->
     <section class="categories-section">
         <div class="container">
             <h2 class="section-title">Destaques da Perfumaria</h2>
@@ -273,8 +270,8 @@
                 
                 <!-- Card Árabes -->
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1594035910387-fea47734265f?auto=format&fit=crop&q=80&w=600" alt="Perfumes Árabes" class="card-img">
-                    <div class="card-content">
+                    <img src="https://images.unsplash.com/photo-1594035910387-fea47734265f?auto=format&fit=crop&q=80&w=600" alt="Frasco de Perfume Árabe" class="card-img">
+                    <div class="card-body">
                         <h3>Perfumes Árabes</h3>
                         <p>Fragrâncias exóticas de altíssima fixação e projeção marcante. O melhor do Oriente com excelente custo-benefício.</p>
                     </div>
@@ -282,8 +279,8 @@
 
                 <!-- Card Nacionais -->
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1615484477778-ca3b77940c25?auto=format&fit=crop&q=80&w=600" alt="Perfumes Nacionais" class="card-img">
-                    <div class="card-content">
+                    <img src="https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?auto=format&fit=crop&q=80&w=600" alt="Frasco de Perfume Nacional" class="card-img">
+                    <div class="card-body">
                         <h3>Nacionais Selecionados</h3>
                         <p>As melhores criações da perfumaria brasileira que entregam performance de nível internacional para o seu dia a dia.</p>
                     </div>
@@ -291,8 +288,8 @@
 
                 <!-- Card Importados -->
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&q=80&w=600" alt="Perfumes Importados" class="card-img">
-                    <div class="card-content">
+                    <img src="https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?auto=format&fit=crop&q=80&w=600" alt="Frasco de Perfume Importado" class="card-img">
+                    <div class="card-body">
                         <h3>Importados Consagrados</h3>
                         <p>Os maiores clássicos mundiais das grandes grifes internacionais com cupons e descontos diferenciados.</p>
                     </div>
@@ -343,7 +340,7 @@
     <footer>
         <div class="container">
             <p>&copy; 2026 Perfumes VIP. Todos os direitos reservados.</p>
-            <p style="margin-top: 6px;">Divulgação independente de ofertas e recomendações de perfumaria.</p>
+            <p style="margin-top: 8px;">Divulgação independente de ofertas e recomendações de perfumaria.</p>
         </div>
     </footer>
 

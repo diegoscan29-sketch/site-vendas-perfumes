@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-html><html lang="pt-br">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,578 +15,335 @@ html><html lang="pt-br">
             --white: #ffffff;
             --gray: #666;
             --whatsapp: #25d366;
-        }    * {
-
-        margin: 0;
-
-        padding: 0;
-
-        box-sizing: border-box;
-
-        font-family: 'Inter', sans-serif;
-
-    }
-
-    body {
-
-        background-color: var(--light);
-
-        color: var(--dark);
-
-        line-height: 1.6;
-
-    }
-
-    h1, h2, h3 {
-
-        font-family: 'Montserrat', sans-serif;
-
-        text-transform: uppercase;
-
-    }
-
-    .container {
-
-        max-width: 1100px;
-
-        margin: 0 auto;
-
-        padding: 0 20px;
-
-    }
-
-    a {
-
-        text-decoration: none;
-
-        transition: 0.3s;
-
-    }
-
-    /* Hero Section */
-
-    .hero {
-
-        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&q=80&w=1920') center/cover;
-
-        color: var(--white);
-
-        padding: 100px 0;
-
-        text-align: center;
-
-    }
-
-    .hero h1 {
-
-        font-size: 2.8rem;
-
-        margin-bottom: 20px;
-
-        color: var(--primary);
-
-    }
-
-    .hero p {
-
-        font-size: 1.2rem;
-
-        margin-bottom: 30px;
-
-        max-width: 700px;
-
-        margin-left: auto;
-
-        margin-right: auto;
-
-    }
-
-    .btn-cta {
-
-        background-color: var(--whatsapp);
-
-        color: white;
-
-        padding: 18px 35px;
-
-        border-radius: 50px;
-
-        font-weight: bold;
-
-        font-size: 1.1rem;
-
-        display: inline-flex;
-
-        align-items: center;
-
-        gap: 10px;
-
-        box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
-
-    }
-
-    .btn-cta:hover {
-
-        transform: translateY(-3px);
-
-        filter: brightness(1.1);
-
-    }
-
-    /* Seção Categorias */
-
-    .categories {
-
-        padding: 60px 0;
-
-        display: grid;
-
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
-        gap: 20px;
-
-    }
-
-    .cat-card {
-
-        background: var(--white);
-
-        padding: 30px;
-
-        text-align: center;
-
-        border-radius: 12px;
-
-        border-bottom: 4px solid var(--primary);
-
-        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-
-    }
-
-    .cat-card h3 {
-
-        margin-bottom: 10px;
-
-        font-size: 1.2rem;
-
-    }
-
-    /* Ofertas */
-
-    .section-title {
-
-        text-align: center;
-
-        margin: 40px 0;
-
-        font-size: 2rem;
-
-    }
-
-    .products-grid {
-
-        display: grid;
-
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-
-        gap: 30px;
-
-        margin-bottom: 60px;
-
-    }
-
-    .product-card {
-
-        background: var(--white);
-
-        border-radius: 15px;
-
-        overflow: hidden;
-
-        box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-
-        transition: 0.3s;
-
-        display: flex;
-
-        flex-direction: column;
-
-    }
-
-    .product-card:hover {
-
-        transform: translateY(-10px);
-
-    }
-
-    .product-img {
-
-        width: 100%;
-
-        height: 250px;
-
-        object-fit: cover;
-
-        background-color: #eee;
-
-    }
-
-    .product-info {
-
-        padding: 20px;
-
-        flex-grow: 1;
-
-        display: flex;
-
-        flex-direction: column;
-
-    }
-
-    .product-name {
-
-        font-weight: 700;
-
-        font-size: 1.1rem;
-
-        margin-bottom: 5px;
-
-    }
-
-    .notes {
-
-        font-size: 0.85rem;
-
-        color: var(--gray);
-
-        margin-bottom: 15px;
-
-        font-style: italic;
-
-    }
-
-    .price {
-
-        font-size: 1.5rem;
-
-        font-weight: 800;
-
-        color: var(--dark);
-
-        margin-bottom: 20px;
-
-    }
-
-    .btn-buy {
-
-        background-color: var(--dark);
-
-        color: var(--white);
-
-        text-align: center;
-
-        padding: 12px;
-
-        border-radius: 8px;
-
-        font-weight: 600;
-
-    }
-
-    .btn-buy:hover {
-
-        background-color: var(--primary);
-
-    }
-
-    /* Depoimentos */
-
-    .testimonials {
-
-        background-color: #eee;
-
-        padding: 80px 0;
-
-    }
-
-    .test-grid {
-
-        display: grid;
-
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-
-        gap: 30px;
-
-    }
-
-    .test-card {
-
-        background: var(--white);
-
-        padding: 30px;
-
-        border-radius: 15px;
-
-        font-style: italic;
-
-        position: relative;
-
-    }
-
-    .test-author {
-
-        display: block;
-
-        margin-top: 15px;
-
-        font-weight: bold;
-
-        color: var(--primary);
-
-        font-style: normal;
-
-    }
-
-    /* Rodapé */
-
-    footer {
-
-        background-color: var(--dark);
-
-        color: #888;
-
-        padding: 50px 0;
-
-        text-align: center;
-
-        font-size: 0.9rem;
-
-    }
-
-    .footer-links a {
-
-        color: #bbb;
-
-        margin: 0 10px;
-
-    }
-
-    .disclaimer {
-
-        margin-top: 20px;
-
-        max-width: 800px;
-
-        margin-left: auto;
-
-        margin-right: auto;
-
-        line-height: 1.4;
-
-    }
-
-    /* Responsividade */
-
-    @media (max-width: 768px) {
-
-        .hero h1 { font-size: 2rem; }
-
-        .hero p { font-size: 1rem
-; }
-}
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&q=80&w=1920') center/cover;
+            color: var(--white);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-cta {
+            background-color: var(--whatsapp);
+            color: white;
+            padding: 18px 35px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-3px);
+            filter: brightness(1.1);
+        }
+
+        /* Seção Categorias */
+        .categories {
+            padding: 60px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .cat-card {
+            background: var(--white);
+            padding: 30px;
+            text-align: center;
+            border-radius: 12px;
+            border-bottom: 4px solid var(--primary);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .cat-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* Ofertas */
+        .section-title {
+            text-align: center;
+            margin: 40px 0;
+            font-size: 2rem;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .product-info {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .notes {
+            font-size: 0.85rem;
+            color: var(--gray);
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+
+        .btn-buy {
+            background-color: var(--dark);
+            color: var(--white);
+            text-align: center;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        .btn-buy:hover {
+            background-color: var(--primary);
+        }
+
+        /* Depoimentos */
+        .testimonials {
+            background-color: #eee;
+            padding: 80px 0;
+        }
+
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .test-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            font-style: italic;
+            position: relative;
+        }
+
+        .test-author {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: var(--primary);
+            font-style: normal;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: var(--dark);
+            color: #888;
+            padding: 50px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a {
+            color: #bbb;
+            margin: 0 10px;
+        }
+
+        .disclaimer {
+            margin-top: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.4;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+        }
+    </style>
 </head>
-<body><!-- Hero Section -->
+<body>
 
-<header class="hero">
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1>Fragrâncias de Luxo com Preço de Oportunidade</h1>
+            <p>O segredo dos colecionadores: Receba em primeira mão ofertas exclusivas de perfumes árabes, nacionais e importados direto no seu celular.</p>
+            
+            <!-- INSTRUÇÃO: Substitua LINK_DO_WHATSAPP pelo link do seu grupo -->
+            <a href="LINK_DO_WHATSAPP" class="btn-cta">
+                QUERO ENTRAR NO GRUPO VIP
+            </a>
+        </div>
+    </header>
 
-    <div class="container">
+    <!-- Categorias -->
+    <section class="container categories">
+        <div class="cat-card">
+            <h3>Perfumes Árabes</h3>
+            <p>A opulência do Oriente com fixação extrema.</p>
+        </div>
+        <div class="cat-card">
+            <h3>Importados</h3>
+            <p>Os clássicos e lançamentos das maiores grifes.</p>
+        </div>
+        <div class="cat-card">
+            <h3>Nacionais</h3>
+            <p>O melhor da perfumaria brasileira em promoção.</p>
+        </div>
+    </section>
 
-        <h1>Fragrâncias de Luxo com Preço de Oportunidade</h1>
+    <!-- Ofertas em Destaque -->
+    <section class="container">
+        <h2 class="section-title">Ofertas do Momento</h2>
+        <div class="products-grid">
+            
+            <!-- Card Produto 1 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/400x400?text=Asad+Lattafa" alt="Perfume Asad Lattafa" class="product-img">
+                <div class="product-info">
+                    <span class="product-name">Asad Lattafa - 100ml</span>
+                    <p class="notes">Notas: Pimenta Preta, Abacaxi, Patchouli e Baunilha.</p>
+                    <p class="price">R$ 289,90</p>
+                    <!-- INSTRUÇÃO: Insira seu link de afiliado do Mercado Livre abaixo -->
+                    <a href="LINK_ML" class="btn-buy">Ver no Mercado Livre</a>
+                </div>
+            </div>
 
-        <p>O segredo dos colecionadores: Receba em primeira mão ofertas exclusivas de perfumes árabes, nacionais e importados direto no seu celular.</p>
+            <!-- Card Produto 2 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/400x400?text=Club+de+Nuit" alt="Perfume Club de Nuit" class="product-img">
+                <div class="product-info">
+                    <span class="product-name">Club de Nuit Intense</span>
+                    <p class="notes">Referência: Creed Aventus (Frutado, Amadeirado).</p>
+                    <p class="price">R$ 347,00</p>
+                    <a href="LINK_ML" class="btn-buy">Ver no Mercado Livre</a>
+                </div>
+            </div>
 
-        
-
-        <!-- INSTRUÇÃO: Altere o link abaixo para o link do seu grupo de WhatsApp -->
-
-        <a href="LINK_DO_WHATSAPP" class="btn-cta">
-
-            QUERO ENTRAR NO GRUPO VIP
-
-        </a>
-
-    </div>
-
-</header>
-
-<!-- Categorias -->
-
-<section class="container categories">
-
-    <div class="cat-card">
-
-        <h3>Perfumes Árabes</h3>
-
-        <p>A opulência do Oriente com fixação extrema.</p>
-
-    </div>
-
-    <div class="cat-card">
-
-        <h3>Importados</h3>
-
-        <p>Os clássicos e lançamentos das maiores grifes.</p>
-
-    </div>
-
-    <div class="cat-card">
-
-        <h3>Nacionais</h3>
-
-        <p>O melhor da perfumaria brasileira em promoção.</p>
-
-    </div>
-
-</section>
-
-<!-- Ofertas em Destaque -->
-
-<section class="container">
-
-    <h2 class="section-title">Ofertas do Momento</h2>
-
-    <div class="products-grid">
-
-        
-
-        <!-- Card Produto 1 -->
-
-        <div class="product-card">
-
-            <!-- INSTRUÇÃO: Substitua a URL da imagem abaixo -->
-
-            <img src="https://via.placeholder.com/400x400?text=Perfume+Arabe" alt="Perfume" class="product-img">
-
-            <div class="product-info">
-
-                <span class="product-name">Asad Lattafa - 100ml</span>
-
-                <p class="notes">Notas: Pimenta Preta, Abacaxi, Patchouli e Baunilha.</p>
-
-                <p class="price">R$ 289,90</p>
-
-                <!-- INSTRUÇÃO: Insira seu link de afiliado do Mercado Livre abaixo -->
-
-                <a href="LINK_ML" class="btn-buy">Ver no Mercado Livre</a>
-
+            <!-- Card Produto 3 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/400x400?text=Essencial+Unico" alt="Perfume Essencial Unico" class="product-img">
+                <div class="product-info">
+                    <span class="product-name">Essencial Único Natura</span>
+                    <p class="notes">Notas: Copaíba, Vetiver e Especiarias Quentes.</p>
+                    <p class="price">R$ 195,00</p>
+                    <a href="LINK_ML" class="btn-buy">Ver no Mercado Livre</a>
+                </div>
             </div>
 
         </div>
+    </section>
 
-        <!-- Card Produto 2 -->
-
-        <div class="product-card">
-
-            <img src="https://via.placeholder.com/400x400?text=Importado+Famoso" alt="Perfume" class="product-img">
-
-            <div class="product-info">
-
-                <span class="product-name">Club de Nuit Intense</span>
-
-                <p class="notes">Referência: Creed Aventus (Frutado, Amadeirado).</p>
-
-                <p class="price">R$ 347,00</p>
-
-                <a href="LINK_ML" class="btn-buy">Ver no Mercado Livre</a>
-
+    <!-- Prova Social -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Quem faz parte, recomenda</h2>
+            <div class="test-grid">
+                <div class="test-card">
+                    "Consegui comprar o Lattafa Khamrah por quase metade do preço que via em outras lojas. As notificações do grupo são muito rápidas!"
+                    <span class="test-author">- Ricardo Silva</span>
+                </div>
+                <div class="test-card">
+                    "Sempre tive medo de falsificação, mas os links do Mercado Livre que postam são de vendedores oficiais. Recomendo demais!"
+                    <span class="test-author">- Ana Clara M.</span>
+                </div>
             </div>
-
         </div>
+    </section>
 
-        <!-- Card Produto 3 -->
-
-        <div class="product-card">
-
-            <img src="https://via.placeholder.com/400x400?text=Nacional+Premium" alt="Perfume" class="product-img">
-
-            <div class="product-info">
-
-                <span class="product-name">Essencial Único Natura</span>
-
-                <p class="notes">Notas: Copaíba, Vetiver e Especiarias Quentes.</p>
-
-                <p class="price">R$ 195,00</p>
-
-                <a href="LINK_ML" class="btn-buy">Ver no Mercado Livre</a>
-
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">Privacidade</a>
+                <a href="#">Termos de Uso</a>
+                <a href="#">Contato</a>
             </div>
-
+            <p class="disclaimer">
+                <strong>Transparência:</strong> Este site atua como divulgador de ofertas. Ao realizar uma compra através de nossos links, podemos receber uma pequena comissão como afiliado, o que não altera o preço final para você. Não somos responsáveis pela entrega ou garantia dos produtos vendidos no Mercado Livre.
+            </p>
+            <p style="margin-top: 15px;">&copy; 2026 Perfumes VIP - Todos os direitos reservados.</p>
         </div>
-
-    </div>
-
-</section>
-
-<!-- Prova Social -->
-
-<section class="testimonials">
-
-    <div class="container">
-
-        <h2 class="section-title">Quem faz parte, recomenda</h2>
-
-        <div class="test-grid">
-
-            <div class="test-card">
-
-                "Consegui comprar o Lattafa Khamrah por quase metade do preço que via em outras lojas. As notificações do grupo são muito rápidas!"
-
-                <span class="test-author">- Ricardo Silva</span>
-
-            </div>
-
-            <div class="test-card">
-
-                "Sempre tive medo de falsificação, mas os links do Mercado Livre que postam são de vendedores oficiais. Recomendo demais!"
-
-                <span class="test-author">- Ana Clara M.</span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- Rodapé -->
-
-<footer>
-
-    <div class="container">
-
-        <div class="footer-links">
-
-            <a href="#">Privacidade</a>
-
-            <a href="#">Termos de Uso</a>
-
-            <a href="#">Contato</a>
-
-        </div>
-
-        <p class="disclaimer">
-
-            <strong>Transparência:</strong> Este site atua como divulgador de ofertas. Ao realizar uma compra através de nossos links, podemos receber uma pequena comissão como afiliado, o que não altera o preço final para você. Não somos responsáveis pela entrega ou garantia dos produtos vendidos no Mercado Livre.
-
-        </p>
-
-        <p style="margin-top: 15px;">&copy; 2024 Perfumes VIP - Todos os direitos reservados.</p>
-
-    </div>
-
-</footer>
+    </footer>
 
 </body>
 </html>
-```

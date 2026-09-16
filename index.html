@@ -1,557 +1,314 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>O Universo da Perfumaria de Luxo & Árabe</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-
+    <title>Perfumes VIP - As Melhores Ofertas e Dicas</title>
+    <!-- Fontes Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
-
         :root {
-
-            --gold: #d4af37;
-
-            --gold-light: #f1d592;
-
-            --black: #0a0a0a;
-
-            --dark-gray: #1a1a1a;
-
-            --glass-bg: rgba(255, 255, 255, 0.05);
-
-            --glass-border: rgba(212, 175, 55, 0.3);
-
-            --text-gray: #e0e0e0;
-
+            --bg-dark: #0f0f12;
+            --card-bg: #18181c;
+            --card-border: #2a2a32;
+            --accent-gold: #e2b857;
+            --text-white: #ffffff;
+            --text-muted: #a0a0b0;
+            --whatsapp-green: #25d366;
+            --whatsapp-hover: #1eb956;
         }
 
         * {
-
             margin: 0;
-
             padding: 0;
-
             box-sizing: border-box;
-
+            font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
         body {
-
-            font-family: 'Montserrat', sans-serif;
-
-            background-color: var(--black);
-
-            color: var(--text-gray);
-
+            background-color: var(--bg-dark);
+            color: var(--text-white);
             line-height: 1.6;
-
-            overflow-x: hidden;
-
-        }
-
-        h1, h2, h3 {
-
-            font-family: 'Playfair Display', serif;
-
-            color: var(--gold);
-
+            -webkit-font-smoothing: antialiased;
         }
 
         .container {
-
-            max-width: 1200px;
-
+            max-width: 1100px;
             margin: 0 auto;
-
-            padding: 0 20px;
-
+            padding: 0 24px;
         }
 
-        /* Header / Hero Section */
-
-        header {
-
-            height: 100vh;
-
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            text-align: center;
-
-            position: relative;
-
-        }
-
-        .hero-content {
-
-            z-index: 2;
-
-            max-width: 800px;
-
-        }
-
-        .hero-content h1 {
-
-            font-size: 3.5rem;
-
-            margin-bottom: 20px;
-
-            letter-spacing: 2px;
-
-            text-transform: uppercase;
-
-        }
-
-        .hero-content p {
-
-            font-size: 1.2rem;
-
-            margin-bottom: 40px;
-
-            font-weight: 300;
-
-            font-style: italic;
-
-        }
-
-        /* WhatsApp Button Animation */
-
-        .cta-button {
-
-            display: inline-block;
-
-            padding: 18px 45px;
-
-            background-color: var(--gold);
-
-            color: var(--black);
-
+        a {
             text-decoration: none;
-
-            font-weight: 700;
-
-            border-radius: 50px;
-
-            transition: all 0.4s ease;
-
-            text-transform: uppercase;
-
-            letter-spacing: 1px;
-
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
-
-            animation: pulse-gold 2s infinite;
-
         }
 
-        @keyframes pulse-gold {
-
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
-
-            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
-
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
-
-        }
-
-        .cta-button:hover {
-
-            background-color: var(--gold-light);
-
-            transform: translateY(-3px);
-
-        }
-
-        /* Why Arabic Perfumery Section */
-
-        .why-section {
-
-            padding: 100px 0;
-
-            background: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%);
-
+        /* Hero Section */
+        header.hero {
+            padding: 100px 0 80px 0;
             text-align: center;
+            background: radial-gradient(circle at top, rgba(226, 184, 87, 0.08) 0%, rgba(15, 15, 18, 0) 70%);
+        }
 
+        .badge {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(226, 184, 87, 0.1);
+            border: 1px solid rgba(226, 184, 87, 0.3);
+            border-radius: 30px;
+            color: var(--accent-gold);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero h1 span {
+            color: var(--accent-gold);
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 680px;
+            margin: 0 auto 36px auto;
+        }
+
+        /* Botão do WhatsApp */
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background-color: var(--whatsapp-green);
+            color: #ffffff;
+            font-size: 1.1rem;
+            font-weight: 700;
+            padding: 18px 40px;
+            border-radius: 50px;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.25);
+            transition: all 0.3s ease;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: var(--whatsapp-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 14px 30px rgba(37, 211, 102, 0.35);
+        }
+
+        /* Ícone do WhatsApp em SVG embutido */
+        .btn-whatsapp svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        /* Seção Categorias / Destaques */
+        .categories-section {
+            padding: 60px 0;
         }
 
         .section-title {
-
-            font-size: 2.5rem;
-
-            margin-bottom: 50px;
-
-        }
-
-        .features-grid {
-
-            display: grid;
-
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
-            gap: 30px;
-
-        }
-
-        .feature-card {
-
-            padding: 40px;
-
-            background: var(--glass-bg);
-
-            border: 1px solid var(--glass-border);
-
-            backdrop-filter: blur(10px);
-
-            border-radius: 15px;
-
-            transition: transform 0.3s ease;
-
-        }
-
-        .feature-card:hover {
-
-            transform: translateY(-10px);
-
-        }
-
-        .feature-card h3 {
-
-            margin-bottom: 15px;
-
-            font-size: 1.5rem;
-
-        }
-
-        /* Olfactory Guide Cards */
-
-        .guide-section {
-
-            padding: 100px 0;
-
-        }
-
-        .guide-grid {
-
-            display: grid;
-
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-
-            gap: 40px;
-
-        }
-
-        .guide-card {
-
-            background: #111;
-
-            border-radius: 20px;
-
-            overflow: hidden;
-
-            border-bottom: 4px solid var(--gold);
-
-        }
-
-        .guide-card img {
-
-            width: 100%;
-
-            height: 250px;
-
-            object-fit: cover;
-
-            opacity: 0.8;
-
-        }
-
-        .guide-info {
-
-            padding: 30px;
-
-        }
-
-        .tag {
-
-            color: var(--gold);
-
-            font-size: 0.8rem;
-
-            text-transform: uppercase;
-
+            text-align: center;
+            font-size: 2rem;
             font-weight: 700;
-
-            margin-bottom: 10px;
-
-            display: block;
-
+            margin-bottom: 48px;
         }
 
-        /* VIP Benefits Section */
-
-        .vip-section {
-
-            padding: 100px 0;
-
-            background-color: #050505;
-
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
         }
 
-        .benefit-item {
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 36px 28px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
 
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(226, 184, 87, 0.4);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Seção Vantagens */
+        .advantages-section {
+            padding: 60px 0;
+            background-color: #131317;
+            border-top: 1px solid #1f1f26;
+            border-bottom: 1px solid #1f1f26;
+        }
+
+        .advantages-list {
+            max-width: 700px;
+            margin: 0 auto;
             display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
 
+        .adv-item {
+            display: flex;
             align-items: center;
+            gap: 16px;
+            background-color: var(--card-bg);
+            padding: 20px 24px;
+            border-radius: 14px;
+            border: 1px solid var(--card-border);
+        }
 
-            margin-bottom: 25px;
+        .adv-item .check {
+            color: var(--whatsapp-green);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
 
+        /* Chamada Final */
+        .cta-final {
+            padding: 90px 0;
+            text-align: center;
+        }
+
+        .cta-final h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .cta-final p {
+            color: var(--text-muted);
+            margin-bottom: 36px;
             font-size: 1.1rem;
-
         }
 
-        .benefit-item span {
-
-            color: var(--gold);
-
-            margin-right: 15px;
-
-            font-size: 1.5rem;
-
-        }
-
-        /* Final CTA Section */
-
-        .final-cta {
-
-            padding: 120px 0;
-
-            text-align: center;
-
-            background: linear-gradient(to bottom, #0a0a0a, #1a1a1a);
-
-        }
-
-        .final-cta h2 {
-
-            font-size: 3rem;
-
-            margin-bottom: 30px;
-
-        }
-
-        .giant-btn {
-
-            padding: 25px 60px;
-
-            font-size: 1.4rem;
-
-        }
-
-        /* Footer */
-
+        /* Rodapé */
         footer {
-
-            padding: 50px 0;
-
+            padding: 40px 0;
             text-align: center;
-
-            border-top: 1px solid #222;
-
-            font-size: 0.9rem;
-
+            border-top: 1px solid #1a1a20;
             color: #666;
-
+            font-size: 0.85rem;
         }
 
-        /* Responsive */
-
+        /* Responsivo */
         @media (max-width: 768px) {
-
-            .hero-content h1 { font-size: 2.2rem; }
-
-            .section-title { font-size: 1.8rem; }
-
-            .final-cta h2 { font-size: 2rem; }
-
+            .hero h1 { font-size: 2.1rem; }
+            .hero p { font-size: 1rem; }
+            .btn-whatsapp { width: 100%; padding: 16px; font-size: 1rem; }
+            .section-title { font-size: 1.6rem; }
         }
-
     </style>
-
 </head>
-
 <body>
 
-    <header>
-
-        <div class="hero-content container">
-
-            <h1>O Universo da Perfumaria de Luxo & Árabe</h1>
-
-            <p>Descubra o mistério por trás das fragrâncias que definem presença, poder e exclusividade.</p>
-
-            <a href="#" class="cta-button">Entrar no Grupo VIP de Curadoria</a>
-
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <span class="badge">Comunidade de Ofertas & Dicas</span>
+            <h1>Os Melhores Perfumes com <span>Descontos Exclusivos</span></h1>
+            <p>Seja notificado sobre cupons, alertas de estoque e as melhores opções de perfumes árabes, nacionais e importados no Mercado Livre.</p>
+            
+            <!-- SUBSTITUA O LINK ABAIXO PELO SEU LINK DO WHATSAPP -->
+            <a href="LINK_DO_WHATSAPP" class="btn-whatsapp">
+                <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                ENTRAR NO GRUPO VIP
+            </a>
         </div>
-
     </header>
 
-    <section class="why-section">
+    <!-- O que você encontra -->
+    <section class="categories-section container">
+        <h2 class="section-title">Destaques da Perfumaria</h2>
+        <div class="grid-3">
+            <div class="card">
+                <span class="card-icon">✨</span>
+                <h3>Perfumes Árabes</h3>
+                <p>Opções com altíssima fixação e projeção marcante. Seleção das melhores fragrâncias orientais com excelente custo-benefício.</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">🍃</span>
+                <h3>Nacionais Selecionados</h3>
+                <p>As melhores criações da perfumaria brasileira que entregam performance de nível internacional para o seu dia a dia.</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">👑</span>
+                <h3>Importados Consagrados</h3>
+                <p>Os maiores clássicos mundiais das grandes grifes com cupons e preços diferenciados em lojas oficiais do Mercado Livre.</p>
+            </div>
+        </div>
+    </section>
 
+    <!-- Vantagens do Grupo -->
+    <section class="advantages-section">
         <div class="container">
-
-            <h2 class="section-title">A Maestria da Perfumaria Oriental</h2>
-
-            <div class="features-grid">
-
-                <div class="feature-card">
-
-                    <h3>Fixação Eterna</h3>
-
-                    <p>O segredo da alta concentração de óleos essenciais que duram mais de 12 horas na pele.</p>
-
+            <h2 class="section-title">O que você recebe no Grupo VIP</h2>
+            <div class="advantages-list">
+                <div class="adv-item">
+                    <span class="check">✓</span>
+                    <span>Alertas em tempo real de cupons ativos no Mercado Livre.</span>
                 </div>
-
-                <div class="feature-card">
-
-                    <h3>Projeção Marcante</h3>
-
-                    <p>Fragrâncias projetadas para preencher o ambiente com elegância e sofisticação.</p>
-
+                <div class="adv-item">
+                    <span class="check">✓</span>
+                    <span>Avisos de reposição de estoque de perfumes disputados.</span>
                 </div>
-
-                <div class="feature-card">
-
-                    <h3>O Ouro Líquido</h3>
-
-                    <p>Conheça a profundidade do Oud, a resina mais cara do mundo, alma dos perfumes árabes.</p>
-
+                <div class="adv-item">
+                    <span class="check">✓</span>
+                    <span>Indicação segura de lojas oficiais e vendedores verificados.</span>
                 </div>
-
+                <div class="adv-item">
+                    <span class="check">✓</span>
+                    <span>Dicas diárias sobre ocasião de uso e fixação das fragrâncias.</span>
+                </div>
             </div>
-
         </div>
-
     </section>
 
-    <section class="guide-section container">
-
-        <h2 class="section-title" style="text-align: center;">Guia de Dicas Olfativas</h2>
-
-        <div class="guide-grid">
-
-            <!-- Card 1 -->
-
-            <div class="guide-card">
-
-                <img src="https://images.unsplash.com/photo-1594035910387-fea47734265f?auto=format&fit=crop&q=80&w=600" alt="Assinatura Árabe">
-
-                <div class="guide-info">
-
-                    <span class="tag">Exclusividade Árabe</span>
-
-                    <h3>Assinaturas Orientais</h3>
-
-                    <p>Destaque para notas de Baunilha e Especiarias quentes. Ideais para quem busca uma identidade olfativa potente e misteriosa.</p>
-
-                </div>
-
-            </div>
-
-            <!-- Card 2 -->
-
-            <div class="guide-card">
-
-                <img src="https://images.unsplash.com/photo-1615484477778-ca3b77940c25?auto=format&fit=crop&q=80&w=600" alt="Achados Nacionais">
-
-                <div class="guide-info">
-
-                    <span class="tag">Custo-Benefício de Luxo</span>
-
-                    <h3>Tesouros Nacionais</h3>
-
-                    <p>Selecionamos marcas brasileiras que utilizam tecnologia de fixação importada, entregando performance de nicho por valores acessíveis.</p>
-
-                </div>
-
-            </div>
-
-            <!-- Card 3 -->
-
-            <div class="guide-card">
-
-                <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&q=80&w=600" alt="Clássicos Importados">
-
-                <div class="guide-info">
-
-                    <span class="tag">Clássicos Atemporais</span>
-
-                    <h3>Ícones Mundiais</h3>
-
-                    <p>Os pilares da perfumaria francesa e italiana. Guia sobre as melhores ocasiões para usar os grandes vencedores de elogios.</p>
-
-                </div>
-
-            </div>
-
-        </div>
-
+    <!-- Chamada Final -->
+    <section class="cta-final container">
+        <h2>Garanta sua vaga no grupo gratuito</h2>
+        <p>Receba as melhores recomendações e ofertas direto no seu WhatsApp.</p>
+        <a href="LINK_DO_WHATSAPP" class="btn-whatsapp">
+            <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+            ENTRAR NO GRUPO VIP
+        </a>
     </section>
 
-    <section class="vip-section">
-
-        <div class="container" style="max-width: 800px;">
-
-            <h2 class="section-title" style="text-align: center;">Por que entrar no Grupo VIP?</h2>
-
-            <div class="benefit-item"><span>✦</span> Acesso antecipado a cupons exclusivos do Mercado Livre.</div>
-
-            <div class="benefit-item"><span>✦</span> Alertas de estoque para perfumes raros e descontinuados.</div>
-
-            <div class="benefit-item"><span>✦</span> Curadoria rigorosa de vendedores oficiais (Sem risco de falsificação).</div>
-
-            <div class="benefit-item"><span>✦</span> Dicas diárias de "layering" (mistura de fragrâncias).</div>
-
-        </div>
-
-    </section>
-
-    <section class="final-cta">
-
-        <div class="container">
-
-            <h2>Eleve seu aroma ao próximo nível.</h2>
-
-            <p style="margin-bottom: 40px;">Faça parte da nossa comunidade selecionada no WhatsApp e receba as melhores recomendações.</p>
-
-            <a href="#" class="cta-button giant-btn">QUERO MINHAS DICAS EXCLUSIVAS</a>
-
-        </div>
-
-    </section>
-
+    <!-- Rodapé -->
     <footer>
-
         <div class="container">
-
-            <p>&copy; 2024 Curadoria de Luxo Olfativo. Todos os direitos reservados.</p>
-
-            <p style="margin-top: 10px; font-size: 0.7rem;">Consulte sempre a disponibilidade de estoque nos links indicados no grupo.</p>
-
+            <p>&copy; 2026 Perfumes VIP. Todos os direitos reservados.</p>
+            <p style="margin-top: 8px; color: #555;">Divulgação independente de ofertas do Mercado Livre.</p>
         </div>
-
     </footer>
 
 </body>
-
 </html>
